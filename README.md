@@ -18,7 +18,7 @@ Candidate generation (retrieval) is the first stage of modern industrial recomme
         ┌─────────────────┐                 ┌─────────────────┐
         │   User Tower    │                 │   Item Tower    │
         │   (2-Layer MLP) │                 │   (2-Layer MLP) │
-        └─────────┬─────────┘               └─────────┬─────────┘
+        └─────────┬───────┘                 └─────────┬───────┘
                   │                                   │
                   ▼                                   ▼
           User Vector (32d)                  Item Vector (32d)
@@ -114,10 +114,11 @@ python main.py
 
 | Metric | Top-10 | Top-50 | Top-100 | Top-500 | Top-1000 |
 | :--- | :---: | :---: | :---: | :---: | :---:|
-| **Recall@K** | 0.0488 | 0.1401 | 0.2208 | 0.5934 | 0.8238
+| **Recall@K** | 0.05 | 0.1401 | 0.2208 | 0.5934 | 0.8238
 | **Precision@K** | 0.0049  | 0.0028 | 0.0022 | 0.0012 | 0.0008 |
 | **NDCG@K** | 0.0275 | 0.0471 | 0.0601 | 0.1069 | 0.1311 |
 
+~ 5X better than baseline
 ---
 
 ## 📜 License

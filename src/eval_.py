@@ -32,7 +32,7 @@ def evaluate_retrieval(
     num_users: int,
     num_items: int,
     device: torch.device,
-    k_values: list = [10, 50, 100, 200, 500, 1000],
+    k_values: list = [10, 50, 100, 200, 500],
 ):
     """Builds FAISS index, filters seen items, and computes Recall@K, Precision@K, NDCG@K[cite: 1]."""
     user_emb, movie_emb = generate_embeddings(model, user_features, movie_features, device)

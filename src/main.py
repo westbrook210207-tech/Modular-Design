@@ -44,7 +44,7 @@ def main():
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
     # 4. Training loop[cite: 1]
-    epochs = 20
+    epochs = 25
     print("\nStarting Training...")
     for epoch in range(epochs):
         model.train()
@@ -68,7 +68,7 @@ def main():
 
     # 5. Retrieval & evaluation[cite: 1]
     print("\nEvaluating Retrieval Performance...")
-    k_values = [10, 50, 100, 200, 500, 1000]
+    k_values = [10, 50, 100, 200, 500]
     metrics = evaluate_retrieval(
         model=model,
         user_features=user_features,
